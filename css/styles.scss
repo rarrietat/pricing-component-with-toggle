@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+$Linear_Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+$Very_Light_Grayish_Blue: hsl(240, 78%, 98%);
+$Light_Grayish_Blue: hsl(234, 14%, 74%);
+$Grayish_Blue: hsl(233, 13%, 49%);
+$Dark_Grayish_Blue: hsl(232, 13%, 33%);
+
+:root{
+    font-size: 15px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $Very_Light_Grayish_Blue;
+}
+
+.bg1{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 375px;
+    height: 658px;
+    background-image: url(../images/bg-top.svg);
+    background-size: cover;
+}
+.bg2{
+    position: fixed;
+    left: 0;
+    top: 100%;
+    transform: translateY(-100%);
+    width: 353px;
+    height: 304px;
+    background-image: url(../images/bg-bottom.svg);
+}
+
+header{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .sub-title{
+        display: flex;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    border: 1px solid green;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    font-size: 11px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: hsl(228, 45%, 44%);
+    }
+}

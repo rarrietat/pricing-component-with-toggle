@@ -18,7 +18,7 @@ body{
     background-color: $Very_Light_Grayish_Blue;
     min-width: 100vw;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .bg1{
@@ -54,18 +54,56 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4.2%;
+    margin-bottom: 3.7%;
     h1{
         margin-top: 5.9%;
+        margin-bottom: 2rem;
         font-size: 1.9rem;
         color: $Grayish_Blue;
     }
     .sub-title{
         display: flex;
+        justify-content: center;
+        align-items: center;
         h2{
             font-size: 1rem;
             color: $Light_Grayish_Blue;
         }
+        .switch{
+            margin: 0 1.5rem;
+            width: 53px;
+            height: 29px;
+            border-radius: 5rem;
+            position: relative;
+            padding: 0;
+            outline: none;
+            border: 0;
+            background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+            cursor: pointer;
+            &:hover{
+                background: hsl(236, 66%, 84%);
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 23px;
+                height: 23px;
+                display: block;
+                margin: 3px 3px;
+                border-radius: 50%;
+                background-color: #ffffff;
+                transition: .5s ease all;
+            }
+        }
+        .active{
+            &::before{
+                right: 45%;
+            }
+        }
+        
     }
 }
 
@@ -97,7 +135,7 @@ header{
                 font-size: 2.4rem;
                 color: $Dark_Grayish_Blue;
             }
-            .price{
+            .price-basic, .price-pro, .price-master{
                 margin-left: .5rem;
                 font-size: 4.4rem;
                 color: $Dark_Grayish_Blue;
@@ -145,7 +183,7 @@ header{
             padding: 3.35rem 2rem;
             border-radius: .6rem;
             background-image: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-            h3, .dollar, .price, li{
+            h3, .dollar, .price-pro, li{
                 color: #ffffff;
             }
             ul{
